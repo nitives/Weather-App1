@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+:root {
+    --primary-color: #4c00ff;
+    --outline: 1.7px hsla(0, 0%, 100%, 0.25) solid;
+    --outline2: 2px hsla(0, 0%, 100%, 0.025) solid;
+    --icon-size: 96px;
+}
+
+.inter {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+::spelling-error, ::grammar-error {
+    color: var(--primary-color);
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color:white;
+}
+
+#search {
+  outline: var(--outline2);
+}
+
+.bg-primary {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#bg {
+  outline: var(--outline2);
+}
+
+.mini-icons-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: var(--outline2);
+}
+
+.mini-icons {
+  object-fit: cover;
+  width: var(--icon-size);
+}
+
+.info-text {
+  padding-bottom: 16px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.humidity, .wind, .pressure {
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- */
+
+.skeleton {
+  position: relative;
+}
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background: linear-gradient(90deg, #0f0f0f, #020202, #0f0f0f);
+  background-size: 200%;
+  animation: skeleton 5s infinite linear reverse;
+  border-radius: 24px;
+  padding: 10px;
+}
+@keyframes skeleton {
+  0% {
+      background-position: -100% 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
+}
