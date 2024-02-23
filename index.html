@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="inter text-white" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - nite</title>
+    <link class="dark:invert" rel="shortcut icon" href="assets/favicon.ico" type="ico">
+    <link href="src/output.css" rel="stylesheet">
+    <link href="assets\weather-icons-dev\weather-icons-dev\production\monochrome\font\Meteocons.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    
+    
+
+    <div id="bg" class="bg-neutral-950/20 mt-[4%] mx-auto p-8 w-full max-w-md h-auto rounded-[3rem] flex-col items-center justify-start gap-2 flex-nowrap">
+        <div class="absolute left-[1400px] top-[100px]">
+            <div class="absolute size-6 rounded-full bg-green-700 animate-ping"></div>
+            <div class="absolute size-6 rounded-full bg-green-600"></div>
+        </div>
+        <div class="relative size-auto flex flex-row items-center flex-nowrap">
+            <button class="absolute left-[89%]" id="searchBtn">
+                <svg class="size-6 stroke-white/[2.2%]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </button>
+            <input id="search" class="placeholder:text-white/[2.2%] pl-6 w-full flex items-center justify-between bg-white/10 bg-primary p-3 rounded-3xl" type="text" placeholder="Search City" spellcheck="true">
+        </div>
+            
+        <div class="items-center justify-center text-center">
+            <div class="py-2">
+                <p id="city" class="font-semibold skeleton py-1 text-6xl">Hollywood</p>
+            </div>
+            <div class="skeleton size-auto flex items-center justify-center">
+                <img id="weatherIcon" src="/assets/clear-day.svg" class="skeleton size-56"/>
+            </div>
+            <div>
+                <p id="description" class="skeleton text-2xl pb-1 opacity-10"></p>
+                <p id="temp" class="font-bold skeleton text-5xl mb-3"></p>
+            </div>
+        </div>
+        
+        <div class="w-full grid grid-cols-2 gap-3">
+            <div class="skeleton mini-icons-container">
+                <img src="assets/humidity.svg" class="mini-icons" alt="Humidity"/>
+                <div>
+                    <p id="humidity" class="humidity"></p>
+                    <p class="info-text">Humidity</p>
+                </div>
+            </div>
+            <div class="skeleton mini-icons-container">
+                <img id="pressureIcon" src="/assets/pressure-high.svg" class="py-1 mini-icons" alt="Pressure"/>
+                <div>
+                    <p id="pressure" class="pressure"></p>
+                    <p class="info-text">Pressure</p>
+                </div>
+            </div>
+            <div class="skeleton mini-icons-container">
+                <img src="/assets/wind.svg" class="mini-icons" alt="Wind"/>
+                <div>
+                    <p id="wind" class="wind"></p>
+                    <p class="info-text">Wind Speed</p>
+                </div>
+            </div>
+            <div class="skeleton mini-icons-container">
+                <img src="/assets/wind.svg" class="mini-icons" alt="Wind"/>
+                <div>
+                    <p id="wind" class="wind"></p>
+                    <p class="info-text">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
